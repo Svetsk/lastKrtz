@@ -86,11 +86,11 @@
         </div>
       </div>
       <div class="pt-[80px] flex justify-between flex-wrap adfsdfd">
-        <div class="maps">
-          <div id="map" class="w-[650px] h-[300px]"></div>
+        <div class="maps aa">
+          <YandexMap class="mas" />
         </div>
         <div class="maps">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.6365888769271!2d36.17731690925025!3d51.70704816724179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412f0366153f51a3%3A0xde832d8190760043!2z0YPQuy4g0JvQuNGC0L7QstGB0LrQsNGPLCA2LCDQmtGD0YDRgdC6LCDQmtGD0YDRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDMwNTAyMw!5e0!3m2!1sru!2suk!4v1721766830743!5m2!1sru!2suk" width="650" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1808.426252691407!2d36.17602089285537!3d51.70507706317878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDQyJzE4LjEiTiAzNsKwMTAnMzguNCJF!5e0!3m2!1sru!2suk!4v1722804777436!5m2!1sru!2suk" width="650" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -98,43 +98,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-
-const map = ref(null);
-
-onMounted(() => {
-  // Загрузка скрипта Яндекс.Карт
-  const script = document.createElement('script');
-  const apiKey = 'd579c8c8c-7d2a-46b0-ad86-5b6dd15545c3'; // Замените на ваш API ключ
-  script.src = `https://api-maps.yandex.ru/2.1/?apikey=${apiKey}&lang=ru_RU`;
-  script.async = true;
-  document.head.appendChild(script);
-
-  script.onload = () => {
-    // Инициализация карты после загрузки скрипта
-    ymaps.ready(() => {
-      map.value = new ymaps.Map('map', {
-        center: [51.705018, 36.177321], // Координаты центра карты
-        zoom: 16, // Уровень масштабирования
-      });
-
-      // Создание метки
-      const placemark = new ymaps.Placemark([51.705018, 36.177321], {
-        hintContent: 'Моя метка',
-        balloonContent: 'Это описание метки'
-      }, {
-        // Опции метки
-        iconLayout: 'default#image',
-        iconImageHref: 'https://img.icons8.com/ios-filled/50/000000/marker.png', // URL картинки иконки
-        iconImageSize: [30, 42], // Размер иконки
-        iconImageOffset: [-15, -42] // Смещение иконки относительно её положения
-      });
-
-      // Добавление метки на карту
-      map.value.geoObjects.add(placemark);
-    });
-  };
-});
 
 </script>
 
@@ -187,7 +150,7 @@ li{
   }
 }
 @media screen and (max-width: 1024px){
-  #map{
+  .mas{
     width: 600px;
   }
   iframe{
@@ -195,7 +158,7 @@ li{
   }
 }
 @media screen and (max-width: 425px){
-  #map{
+  .mas{
     width: 400px;
   }
   iframe{
@@ -203,8 +166,8 @@ li{
   }
 }
 @media screen and (max-width: 390px){
-  #map{
-    width: 350px;
+  .mas{
+    width: 350px !important;
   }
   iframe{
     width: 350px;
