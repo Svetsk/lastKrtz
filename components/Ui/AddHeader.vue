@@ -111,10 +111,10 @@ export default {
                 <nuxt-link to="/">Главная</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/galary">Наша продукция</nuxt-link>
+                <nuxt-link to="/galary#target-section">Наша продукция</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/contact">Контакты</nuxt-link>
+                <nuxt-link to="/contact#forma">Контакты</nuxt-link>
               </li>
             </ul>
           </div>
