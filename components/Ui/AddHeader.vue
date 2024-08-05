@@ -1,45 +1,50 @@
-<script >
+<script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
 
-export default {
-  data() {
-    return {
-      show: false
+// Создаём реактивное состояние для класса заголовка
+const headerClass = ref('header-default');
+
+// Получаем текущий маршрут
+const route = useRoute();
+
+// Определяем начальный фон заголовка
+const headerBackground = computed(() => {
+  // Замените '/special-page' на путь вашей страницы
+  if (route.path === '/privacy') {
+    return '#000'; // Чёрный цвет фона для специальной страницы
+  }
+  return ''; // Возвращаем пустое значение или другой цвет по умолчанию
+});
+// Обработчик прокрутки
+const handleScroll = () => {
+  const targetSection = document.getElementById('target-section');
+  if (targetSection) {
+    const rect = targetSection.getBoundingClientRect();
+    if (rect.top <= 0) {
+      headerClass.value = 'header-changed';
+    } else {
+      headerClass.value = 'header-default';
     }
-  },
-  setup() {
-    const headerClass = ref('header-default');
-
-    const handleScroll = () => {
-      const targetSection = document.getElementById('target-section');
-      if (targetSection) {
-        const rect = targetSection.getBoundingClientRect();
-        if (rect.top <= 0) {
-          headerClass.value = 'header-changed';
-        } else {
-          headerClass.value = 'header-default';
-        }
-      }
-    };
-
-    onMounted(() => {
-      window.addEventListener('scroll', handleScroll);
-    });
-
-    onUnmounted(() => {
-      window.removeEventListener('scroll', handleScroll);
-    });
-
-    return {
-      headerClass
-    };
   }
 };
 
+// Устанавливаем начальное значение headerClass в зависимости от текущего пути
+onMounted(() => {
+  if (route.path === '/target-page') { // Замените '/target-page' на нужный вам путь
+    headerClass.value = 'header-special'; // Замените 'header-special' на нужный вам класс
+  }
+
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-  <header :class="headerClass">
+  <header :class="headerClass" :style="{ backgroundColor: headerBackground }">
     <div class="container">
       <div class="flex justify-between items-center py-[25px] htadf">
         <a href="/" class="logo flex gap-[18px] items-center">
@@ -114,11 +119,7 @@ export default {
                 <nuxt-link to="/galary#target-section">Наша продукция</nuxt-link>
               </li>
               <li>
-<<<<<<< HEAD
-                <nuxt-link to="/contact#forma">Контакты</nuxt-link>
-=======
                 <nuxt-link to="/contact#cont">Контакты</nuxt-link>
->>>>>>> c404131 (Ваше сообщение к коммиту)
               </li>
             </ul>
           </div>

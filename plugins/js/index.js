@@ -1,3 +1,1 @@
-export default function myFunction() {
-    console.log('test');
-}
+console.log('ok')

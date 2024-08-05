@@ -54,7 +54,7 @@ const submitForm = async () => {
 
 
 <template>
-  <div class="pt-[300px] relative ffo" id="forma">
+  <div class="pt-[300px] relative ffo">
     <nuxt-img src="/image/settings.png" class="absolute z-[1] left-[800px] bottom-0 w-[250px] one" />
     <nuxt-img src="/image/settings.png" class="absolute z-[11] left-[900px] w-[200px] two" />
     <div class="container z-100">
@@ -71,7 +71,7 @@ const submitForm = async () => {
           </div>
         </div>
         <div>
-          <form class="form z-[10] relative" @submit.prevent="submitForm">
+          <form class="form z-[10] relative" @submit.prevent="submitForm" id="forma">
             <label class="text-[62px] text-white font-[700] text-center">Оставить заявку</label>
             <input type="text" id="fio" v-model="fio" required placeholder="ФИО">
             <input type="tel" id="phone" v-model="phone" required placeholder="Номер телефона">
