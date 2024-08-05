@@ -94,6 +94,28 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="wrpdev">
+        <div class="flex gap-[40px] justify-center dev">
+          <div>
+            <p>
+              Дизайнер сайта: Виктория Бодрова
+            </p>
+            <a class="" href="https://t.me/neftinc">
+              Контакты: <u>@neftinc (Телеграмм).</u>
+            </a>
+          </div>
+          <div>
+            <p>
+              Командна разработки: Александр Фигуркин
+            </p>
+            <a href="https://t.me/SvetskiyS">
+              Контакты: <u>@SvetskiyS (Телеграмм).</u>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -102,6 +124,40 @@
 </script>
 
 <style lang="scss" scoped>
+.dev{
+  border-radius: 40px;
+  border: 1px solid black;
+  padding: 12px 12px;
+}
+.wrpdev{
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 789px) {
+  .dev{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 12px 48px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .dev{
+    padding: 12px 24px;
+  }
+}
+@media screen and (max-width: 389px) {
+  .dev{
+    padding: 12px 12px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .dev{
+    padding: 12px 12px;
+    * {
+      font-size: 12px;
+    }
+  }
+}
 li{
   list-style: inside;
   padding-left: 20px;

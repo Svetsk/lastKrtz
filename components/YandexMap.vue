@@ -21,7 +21,7 @@ const initMap = () => {
 
     // Создаем метку
     const placemark = new window.ymaps.Placemark(placemarkCoordinates, {
-      balloonContent: 'Это моя метка', // Контент балуна
+      balloonContent: 'ООО "КРТЗ"', // Контент балуна
     }, {
       // Опции метки
       preset: 'islands#icon',
