@@ -82,7 +82,7 @@ export default {
                   <nuxt-link to="/galary#target-section">Наша продукция</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/contact#forma">Контакты</nuxt-link>
+                  <nuxt-link to="/contact#cont">Контакты</nuxt-link>
                 </li>
               </ul>
             </nav>
@@ -114,7 +114,11 @@ export default {
                 <nuxt-link to="/galary#target-section">Наша продукция</nuxt-link>
               </li>
               <li>
+<<<<<<< HEAD
                 <nuxt-link to="/contact#forma">Контакты</nuxt-link>
+=======
+                <nuxt-link to="/contact#cont">Контакты</nuxt-link>
+>>>>>>> c404131 (Ваше сообщение к коммиту)
               </li>
             </ul>
           </div>

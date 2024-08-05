@@ -6,8 +6,8 @@ export default defineEventHandler(async (event) => {
     const { fio, phone, comment } = body;
 
     const message = `❗️НОВАЯ ЗАЯВКА \n\n ФИО: ${fio}\nТелефон: ${phone}\nКомментарий: ${comment}`;
-    const token = '7298758499:AAFg4ZGKqupJlVmEifeM_10_4hpGSLpMPI8'; // Замените на токен вашего бота
-    const chatId = '950445300'; // Замените на ваш chat ID или ID группы, куда хотите отправлять сообщения
+    const token = '7454948995:AAEZugQWPtEYkba6X9j5ycubHssmAD7cUBc'; // Замените на токен вашего бота
+    const chatId = '6711483014'; // Замените на ваш chat ID или ID группы, куда хотите отправлять сообщения
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 

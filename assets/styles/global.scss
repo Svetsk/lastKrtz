@@ -29,6 +29,7 @@ img{
     margin: 0 auto;
     max-width: 1600px;
     padding: 50px 20px 0;
+    overflow-x: hidden;
     &:nth-child(1){
         padding: 0 20px;
     }
@@ -37,6 +38,7 @@ img{
     margin: 0 auto;
     max-width: 1776px;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;

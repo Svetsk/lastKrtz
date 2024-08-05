@@ -76,6 +76,14 @@ const submitForm = async () => {
             <input type="text" id="fio" v-model="fio" required placeholder="ФИО">
             <input type="tel" id="phone" v-model="phone" required placeholder="Номер телефона">
             <textarea id="comment" v-model="comment" required placeholder="Уточнения"></textarea>
+            <div class="flex items-center asdxx">
+              <input type="checkbox" class="w-[32px] h-[32px]" required v-model="privacyPolicyAccepted">
+              <label>
+                <a href="/privacy" class="text-black text-[14px]">
+                  Я соглашаюсь с <u>политикой конфиденциальности и правилами обработки персональных данных</u>
+                </a>
+              </label>
+            </div>
             <div class="flex justify-center pt-[32px] pb-[12px]">
               <button type="submit">Записаться</button>
             </div>
@@ -89,6 +97,21 @@ const submitForm = async () => {
 
 
 <style scoped lang="scss">
+.asdxx{
+  max-width: 500px;
+  gap: 24px;
+  & input{
+    width: 32px !important;
+    height: 32px !important;
+  }
+  & label{
+    font-weight: 600;
+    line-height: 1.2 !important;
+    & a{
+      color: white;
+    }
+  }
+}
 .form{
   display: flex;
   flex-direction: column;
@@ -181,6 +204,11 @@ button{
     }
     label{
       font-size: 48px;
+    }
+  }
+  .asdxx{
+    & label{
+      line-height: 0.8 !important;
     }
   }
 }

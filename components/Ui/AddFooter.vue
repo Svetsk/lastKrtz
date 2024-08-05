@@ -1,5 +1,5 @@
 <template>
-  <footer class="pt-[200px] pb-[48px] fot">
+  <footer class="pt-[200px] pb-[48px] fot" id="cont">
     <div class="container">
       <ui-elements-title title="Контакты" />
       <div class="flex justify-between items-start flex-wrap pt-[70px] vbv">
