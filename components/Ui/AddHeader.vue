@@ -313,7 +313,7 @@ p{
 @media screen and (max-width: 393px) {
   .bur{
     justify-content: flex-start;
-    gap: 12px !important;
+    gap: 16px !important;
   }
 }
 @media screen and (max-width: 391px) {
