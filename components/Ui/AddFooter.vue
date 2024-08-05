@@ -215,18 +215,50 @@ li{
 }
 @media screen and (max-width: 425px){
   .mas{
-    width: 400px;
+    width: 360px;
+  }
+  iframe{
+    width: 360px;
+  }
+}
+@media screen and (max-width: 490px){
+  .mas{
+    width: 400px !important;
   }
   iframe{
     width: 400px;
   }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 460px){
   .mas{
-    width: 350px !important;
+    width: 360px !important;
   }
   iframe{
-    width: 350px;
+    width: 360px;
+  }
+}
+@media screen and (max-width: 390px){
+  .mas{
+    width: 330px !important;
+  }
+  iframe{
+    width: 330px;
+  }
+}
+@media screen and (max-width: 340px){
+  .mas{
+    width: 310px !important;
+  }
+  iframe{
+    width: 310px;
+  }
+}
+@media screen and (max-width: 320px){
+  .mas{
+    width: 290px !important;
+  }
+  iframe{
+    width: 290px;
   }
 }
 </style>

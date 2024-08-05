@@ -1,21 +1,22 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 // Создаём реактивное состояние для класса заголовка
 const headerClass = ref('header-default');
+const show = ref(false); // Добавляем переменную для управления отображением
 
 // Получаем текущий маршрут
 const route = useRoute();
 
 // Определяем начальный фон заголовка
 const headerBackground = computed(() => {
-  // Замените '/special-page' на путь вашей страницы
   if (route.path === '/privacy') {
     return '#000'; // Чёрный цвет фона для специальной страницы
   }
   return ''; // Возвращаем пустое значение или другой цвет по умолчанию
 });
+
 // Обработчик прокрутки
 const handleScroll = () => {
   const targetSection = document.getElementById('target-section');
@@ -110,7 +111,6 @@ onUnmounted(() => {
             <button @click="show = !show" class="cl text-2xl">
               <nuxt-img src="/image/ui/close.svg" class="w-[28px]" />
             </button>
-
             <ul>
               <li>
                 <nuxt-link to="/">Главная</nuxt-link>
@@ -253,13 +253,12 @@ p{
     width: 50%;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
   header{
-    width: 420px;
+    width: 425px;
   }
   .bur{
-    justify-content: flex-start;
-    gap: 48px;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 391px) {
