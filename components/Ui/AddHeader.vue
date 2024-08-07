@@ -46,7 +46,7 @@ onUnmounted(() => {
 
 <template>
   <header :class="headerClass" :style="{ backgroundColor: headerBackground }">
-    <div class="container">
+    <div class="containera">
       <div class="flex justify-between items-center py-[25px] htadf">
         <a href="/" class="logo flex gap-[18px] items-center">
           <nuxt-img src="/image/logo.png" />

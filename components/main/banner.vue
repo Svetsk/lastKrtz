@@ -4,7 +4,7 @@
 
 <template>
   <div class="max-ww">
-    <div class="container">
+    <div class="containera">
       <div class="ban">
         <div>
           <h1>Надежный партнер<br>для сельского хозяйства и промышленного<br>производства</h1>

@@ -2,7 +2,6 @@ export default {
   plugins: [
     '~/plugins/js/index.js'
   ],
-
   server: {
     host: '0.0.0.0'
   },
@@ -28,5 +27,5 @@ export default {
     }
   },
 
-  compatibilityDate: '2024-08-06',
+  compatibilityDate: '2024-08-07',
 };

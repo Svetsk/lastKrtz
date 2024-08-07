@@ -54,41 +54,43 @@ const submitForm = async () => {
 
 
 <template>
-  <div class="pt-[300px] relative ffo">
-    <nuxt-img src="/image/settings.png" class="absolute z-[1] left-[800px] bottom-0 w-[250px] one" />
-    <nuxt-img src="/image/settings.png" class="absolute z-[11] left-[900px] w-[200px] two" />
-    <div class="container z-100">
-      <div class="flex justify-between items-start frm">
-        <div class="flex flex-col gap-[140px] qweasd">
-          <div class="flex gap-[44px] items-center bbv">
-            <div class="krtz__img">
-              <nuxt-img src="/image/logo2.png" class="w-[138px] h-[138px]" />
+  <div class="containera">
+    <div class="pt-[300px] relative ffo">
+      <nuxt-img src="/image/settings.png" class="absolute z-[1] left-[800px] bottom-0 w-[250px] one" />
+      <nuxt-img src="/image/settings.png" class="absolute z-[11] left-[900px] w-[200px] two" />
+      <div class="container z-100">
+        <div class="flex justify-between items-start frm">
+          <div class="flex flex-col gap-[140px] qweasd">
+            <div class="flex gap-[44px] items-center bbv">
+              <div class="krtz__img">
+                <nuxt-img src="/image/logo2.png" class="w-[138px] h-[138px]" />
+              </div>
+              <p class="text-[35px] font-[600]">Курский<br>Ремонтно-Технический<br>Завод</p>
             </div>
-            <p class="text-[35px] font-[600]">Курский<br>Ремонтно-Технический<br>Завод</p>
+            <div>
+              <nuxt-img src="/image/formzav.png" class="w-[405px] h-[412px] qweqwe" />
+            </div>
           </div>
           <div>
-            <nuxt-img src="/image/formzav.png" class="w-[405px] h-[412px] qweqwe" />
+            <form class="form z-[10] relative" @submit.prevent="submitForm" id="forma">
+              <label class="text-[62px] text-white font-[700] text-center">Оставить заявку</label>
+              <input type="text" id="fio" v-model="fio" required placeholder="ФИО">
+              <input type="tel" id="phone" v-model="phone" required placeholder="Номер телефона">
+              <textarea id="comment" v-model="comment" required placeholder="Уточнения"></textarea>
+              <div class="flex items-center asdxx">
+                <input type="checkbox" class="w-[32px] h-[32px]" required v-model="privacyPolicyAccepted">
+                <label>
+                  <a href="/privacy" class="text-black text-[14px]">
+                    Я соглашаюсь с <u>политикой конфиденциальности и правилами обработки персональных данных</u>
+                  </a>
+                </label>
+              </div>
+              <div class="flex justify-center pt-[32px] pb-[12px]">
+                <button type="submit">Записаться</button>
+              </div>
+            </form>
+            <ui-Notification v-if="notificationVisible" :message="notificationMessage" :show="notificationVisible" />
           </div>
-        </div>
-        <div>
-          <form class="form z-[10] relative" @submit.prevent="submitForm" id="forma">
-            <label class="text-[62px] text-white font-[700] text-center">Оставить заявку</label>
-            <input type="text" id="fio" v-model="fio" required placeholder="ФИО">
-            <input type="tel" id="phone" v-model="phone" required placeholder="Номер телефона">
-            <textarea id="comment" v-model="comment" required placeholder="Уточнения"></textarea>
-            <div class="flex items-center asdxx">
-              <input type="checkbox" class="w-[32px] h-[32px]" required v-model="privacyPolicyAccepted">
-              <label>
-                <a href="/privacy" class="text-black text-[14px]">
-                  Я соглашаюсь с <u>политикой конфиденциальности и правилами обработки персональных данных</u>
-                </a>
-              </label>
-            </div>
-            <div class="flex justify-center pt-[32px] pb-[12px]">
-              <button type="submit">Записаться</button>
-            </div>
-          </form>
-          <ui-Notification v-if="notificationVisible" :message="notificationMessage" :show="notificationVisible" />
         </div>
       </div>
     </div>

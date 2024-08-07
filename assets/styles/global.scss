@@ -25,7 +25,7 @@ img{
     width: inherit;
     height: inherit;
 }
-.container{
+.containera{
     margin: 0 auto;
     max-width: 1600px;
     padding: 50px 20px 0;
@@ -34,7 +34,7 @@ img{
         padding: 0 20px;
     }
 }
-.container-fluide{
+.container-fluidea{
     margin: 0 auto;
     max-width: 1776px;
     padding: 0 20px;
@@ -62,35 +62,4 @@ p{
 }
 .swiper-button-prev{
     color: #EA7F00 !important;
-}
-
-@media screen and (max-width: 1024px) {
-    .container{
-        max-width: 1024px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .container{
-        max-width: 768px;
-    }
-}
-@media screen and (max-width: 425px) {
-    .container{
-        max-width: 425px;
-    }
-}
-@media screen and (max-width: 390px) {
-    .container{
-        max-width: 390px;
-    }
-}
-@media screen and (max-width: 340px) {
-    .container{
-        max-width: 340px;
-    }
-}
-@media screen and (max-width: 320px) {
-    .container{
-        max-width: 320px;
-    }
 }

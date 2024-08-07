@@ -1,6 +1,6 @@
 <template>
   <footer class="pt-[200px] pb-[48px] fot" id="cont">
-    <div class="container">
+    <div class="containera">
       <ui-elements-title title="Контакты" />
       <div class="flex justify-between items-start flex-wrap pt-[70px] vbv">
         <div class="flex flex-col gap-[32px] ddd">
@@ -94,7 +94,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="containera">
       <div class="wrpdev">
         <div class="flex gap-[40px] justify-center dev">
           <div>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="containera">
     <div class="wrapper">
       <div class="px-[46px] py-[34px]">
         <div class="flex items-center justify-between nn">

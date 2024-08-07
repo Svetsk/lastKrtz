@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="container" id="target-section">
+  <div class="containera" id="target-section">
     <h1 class="pt-[200px] pb-[40px] text-[48px] font-[600] max-w-[900px]">Политика в отношении обработки персональных данных</h1>
     <p>
       1. Общие положения<br>
