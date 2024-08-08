@@ -1,5 +1,5 @@
 <template>
-  <footer class="pt-[200px] pb-[48px] fot" id="cont">
+  <footer class="pt-[200px] pb-[0px] fot" id="cont">
     <div class="containera">
       <ui-elements-title title="Контакты" />
       <div class="flex justify-between items-start flex-wrap pt-[70px] vbv">
@@ -97,20 +97,26 @@
     <div class="containera">
       <div class="wrpdev">
         <div class="flex gap-[40px] justify-center dev">
-          <div>
+          <div class="flez">
             <p>
               Дизайнер сайта: Виктория Бодрова
             </p>
-            <a class="" href="https://t.me/neftinc">
+            <a class="dev__desktop" href="https://t.me/neftinc">
               Контакты: <u>@neftinc (Телеграмм).</u>
             </a>
+            <a class="dev__mobile" href="https://t.me/neftinc">
+              <u>@neftinc (Телеграмм).</u>
+            </a>
           </div>
-          <div>
+          <div class="flez">
             <p>
               Командна разработки: Александр Фигуркин
             </p>
-            <a href="https://t.me/SvetskiyS">
+            <a class="dev__desktop" href="https://t.me/SvetskiyS">
               Контакты: <u>@SvetskiyS (Телеграмм).</u>
+            </a>
+            <a class="dev__mobile" href="https://t.me/SvetskiyS">
+              <u>@SvetskiyS (Телеграмм).</u>
             </a>
           </div>
         </div>
@@ -124,25 +130,47 @@
 </script>
 
 <style lang="scss" scoped>
+.dev__mobile{
+  display: none;
+}
 .dev{
   border-radius: 40px;
   border: 1px solid black;
-  padding: 12px 12px;
+  padding: 0px 12px;
 }
 .wrpdev{
-  max-width: 900px;
+  max-width: 500px;
   margin: 0 auto;
+  & p,a{
+    font-size: 10px;
+  }
 }
 @media screen and (max-width: 789px) {
   .dev{
     flex-wrap: wrap;
     justify-content: flex-start;
+    row-gap: 8px;
     padding: 12px 48px;
+  }
+  .wrpdev{
+    & p,a{
+      font-size: 8px;
+    }
   }
 }
 @media screen and (max-width: 426px) {
+  .dev__mobile{
+    display: flex;
+  }
+  .dev__desktop{
+    display: none;
+  }
   .dev{
     padding: 12px 24px;
+  }
+  .flez{
+    display: flex;
+    gap: 8px;
   }
 }
 @media screen and (max-width: 389px) {
